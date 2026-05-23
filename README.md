@@ -39,18 +39,6 @@ export CLI_GPT_PATH='path/to/project/directory'
 
 6.  **Open new shell:** Open a new `zsh` session, or run `source ~/.zshrc`.
 
-## Future Plans and Features
-
-- Built-in automated testing environment allowing users to quickly sandbox commands. (I had chroot or LVM snapshots in mind for this.)
-- Support for multiple APIs for quickly accessing various models.
-- Support for locally hosted models.
-
 ## Inspiration
 
 When I first began using Linux and learning the command line, I was often sifting through Stack Overflow posts, man pages, and blog posts. I remember dreaming I could use natural language to quickly reference commands or write simple scripts. Modern NLP technology makes that feasible. I hope this project helps you learn the command line quickly and effectively, and speeds up your workflow.
-
-## Credits
-
-Developed by myself. All contributions are deeply appreciated.
-
-**Enjoy using cli-gpt!**
