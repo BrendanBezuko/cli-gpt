@@ -1,0 +1,21 @@
+# Virtual environment (this repo uses a root-level venv)
+bin/
+lib/
+Lib/
+include/
+share/
+Scripts/
+pyvenv.cfg
+pip-selfcheck.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Secrets / local env
+.env
+.env.*
