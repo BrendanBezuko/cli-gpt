@@ -1,8 +1,6 @@
 # nlp-to-zsh
 
-<video src="screenshots/gpt-bash-demo.mp4" controls width="100%">
-  Demo: natural language to shell commands with nlp-to-zsh
-</video>
+![demo gif](/screenshots/gpt-bash-demo.gif)
 
 **2026 update:** Looking back at this tool I made in early 2023, I was ahead of the curve! It's interesting to see major companies like Google integrate similar features into their cloud products. This tool should stay useful for casual system admins. This update cleaned up the repo and replaced the fine-tuned model with a prompt, since GPT-5.5 no longer needs or supports fine-tuning (for this use case). A prompt with structured output is more efficient, faster, and better in every way.
 
