@@ -14,7 +14,7 @@ Use at your own risk. This tool is provided without guarantees or warranty. It s
 
 ## What it Does and How to Use
 
-Type what you want to do in plain English and press `Ctrl+G`. Choose from the listed options, and the command will appear in your command-line buffer.
+Type what you want to do in plain English and press `Ctrl+G`. A curses UI opens with GPT suggestions. Pick one with Enter, or press `e` to edit your prompt and retry if the results miss the mark.
 
 ## Supported Systems
 
@@ -22,9 +22,9 @@ cli-gpt is developed and tested primarily for GNU/Linux systems. macOS users mig
 
 ## Setup and Installation
 
-1.  **Install Dependencies:** Ensure `zsh`, `python`, and `fzf` are installed on your system (using either `brew` or `pacman`).
+1.  **Install Dependencies:** Ensure `zsh` and `python` are installed on your system (using either `brew` or `pacman`).
 2.  **Python Requirements:** Install the Python dependencies. On macOS, I use a venv because I did not want to install globally and risk unintended side effects. Run `python3 -m venv ./` in the project directory, then `source bin/activate` and `pip install -r requirements.txt`. On Arch Linux, you can also run `sudo pacman -S python-openai` to install the dependency globally. Check older commits in this repo, or modify `cli-gpt.zsh` to use your system Python.
-3.  **Script Installation:** `cp ask_gpt.py /usr/local/bin/ && chmod +x /usr/local/bin/ask_gpt.py` (only if you are using the Arch Linux method; otherwise, run `chmod +x ask_gpt.py`). For both macOS and Arch Linux, run `cp cli-gpt.zsh /usr/local/bin/ && chmod +x /usr/local/bin/cli-gpt.zsh`. You may need `sudo` for elevated permissions. Keep `system_prompt.txt` next to `ask_gpt.py` (or set `CLI_GPT_PATH` to the project directory and run from there).
+3.  **Script Installation:** Run `chmod +x ask_gpt.py cli_gpt_ui.py`. For both macOS and Arch Linux, run `cp cli-gpt.zsh /usr/local/bin/ && chmod +x /usr/local/bin/cli-gpt.zsh`. You may need `sudo` for elevated permissions. Keep `system_prompt.txt`, `ask_gpt.py`, and `cli_gpt_ui.py` together in the project directory (or set `CLI_GPT_PATH` to that directory).
 4.  **OpenAI Setup:** Create an API key at [OpenAI](https://platform.openai.com/). This project uses **GPT-5.5** with a structured JSON response (no fine-tuning or `linux-guru.jsonl` required). The system prompt in `system_prompt.txt` encodes the same behavior as the old fine-tuned assistant: natural language in, runnable shell commands out.
 
 5.  **Shell Integration:** Append to `~/.zshrc`:
